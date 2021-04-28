@@ -9,10 +9,13 @@ cognomi.push(cognome_add);
 // 3. stampa la lista ordinata alfabeticamente
 cognomi = cognomi.sort()
 //console.log(cognomi);
+var li_id = document.getElementById('lista_cognomi');
+var htmlContent = '';
 
 // 4. scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
 for (var i = 0; i < cognomi.length; i++) {
     console.log('Posizione ' + (i + 1) + ': Signor, ' + cognomi[i]);
-
+    htmlContent += '<li>' + cognomi[i] + '</li>'
 }
-document.getElementById('lista_cognomi').innerHTML = '<li>' + cognomi + '</li>';
+
+li_id.innerHTML = htmlContent;
